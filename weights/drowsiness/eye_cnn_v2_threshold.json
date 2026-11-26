@@ -1,0 +1,15 @@
+{
+  "model": "eye_cnn_v2.keras",
+  "threshold": 0.79,
+  "tta": true,
+  "closed_weight": 1.0,
+  "chosen_on": "validation",
+  "test_people": [
+    "s0009",
+    "s0020",
+    "s0023",
+    "s0024",
+    "s0031",
+    "s0037"
+  ]
+}
