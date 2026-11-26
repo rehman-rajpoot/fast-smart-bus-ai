@@ -440,13 +440,13 @@ class GoogleCloudAIHandler(BaseHTTPRequestHandler):
         if self.path in ("/", "/api/health"):
             self._set_cors(200)
             status = {
-                "service": "FAST Smart Bus - Google Cloud AI Inference Server",
+                "service": "FAST Smart Bus - Azure Cloud AI Inference Server",
                 "status": "ONLINE",
                 "encryption": "FSE1 (AES/CTR-HMAC Authenticated Encrypted Evidence)",
                 "modelsLoaded": {
                     "mobilePhoneDetector": str(WEIGHTS_PATH.name),
                     "weightsPresent": WEIGHTS_PATH.exists(),
-                    "drowsinessDetector": "OpenCV EAR + Haar Cascade Eye/Face Verifier",
+                    "drowsinessDetector": AI_ANALYZER.drowsy_backend,
                     "roadIncidentTrimmer": "2-Minute Clip Trimmer (-60s to +60s)",
                     "faceEmbeddingExtractor": FACE_EXTRACTOR is not None,
                 },
